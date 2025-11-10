@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="storyData"
+            type="com.growwthapps.dailypost.v2.model.StoryItem" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.agrawalsuneet.loaderspack.loaders.RotatingCircularSticksLoader
+            android:id="@+id/iv_story_bgg"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_margin="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:rotatingsticks_animDuration="0"
+            app:rotatingsticks_innerCircleRadius="@dimen/_1sdp"
+            app:rotatingsticks_noOfSticks="15"
+            app:rotatingsticks_outerCircleRadius="@dimen/_24sdp"
+            app:rotatingsticks_stickColor="@color/white"
+            app:rotatingsticks_viewBackgroundColor="@color/white" />
+
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:padding="1dp"
+
+            android:background="@drawable/story_border">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_story"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_55sdp"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/_7sdp"
+                app:cardElevation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_story"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/spaceholder"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="-3dp"
+                        android:background="@drawable/date_bg"
+                        android:fontFamily="@font/kumbhsans_medium"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="true"
+                        android:text="@{storyData.date}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_4sdp"
+                        android:visibility="visible"
+                        tools:text="04 Feb" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv_story"
+                android:layout_marginVertical="@dimen/_4sdp"
+                android:fontFamily="@font/kumbhsans_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/_3sdp"
+                android:maxLines="1"
+                android:text="@{storyData.title}"
+                android:singleLine="true"
+                android:textColor="@color/black1"
+                android:textSize="@dimen/_7sdp"
+               />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

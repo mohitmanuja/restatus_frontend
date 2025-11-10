@@ -1,0 +1,4 @@
+<!-- res/drawable/bg_pin_error.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/gray" />
+</shape>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".ui.activities.DownloadActivity">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_29sdp">
+
+            <LinearLayout
+                android:id="@+id/ll_header_download"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/backImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/_11sdp"
+                    android:src="@drawable/back_img"
+                    android:visibility="gone"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/kumbhsans_medium"
+                    android:includeFontPadding="false"
+                    android:text="Downloads"
+                    android:textColor="@color/black1"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/settingImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/setting_img"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_of_download"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/ll_header_download"
+                android:background="@color/bg_screen" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout5"
+            android:background="@color/white"
+            android:elevation="0dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/downloadTabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/app_color1"
+                    app:tabIndicator="@drawable/full_rounded_bg"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabIndicatorHeight="2.5dp"
+                    app:tabInlineLabel="true"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@color/ripple_color"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="@color/bottom_colors">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_personl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Posts" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:id="@+id/tab_business"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Greetings" />
+
+                </com.google.android.material.tabs.TabLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rvDownloads"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@+id/ll_tab"
+             android:orientation="vertical"
+             android:background="@color/bg_screen"
+             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+             tools:listitem="@layout/item_download"
+             app:spanCount="2">
+
+         </androidx.recyclerview.widget.RecyclerView>
+
+         <LinearLayout
+             android:id="@+id/llNotFound"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:visibility="gone"
+             android:layout_centerInParent="true"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent">
+
+             <com.airbnb.lottie.LottieAnimationView
+                 android:layout_width="130dp"
+                 android:layout_height="130dp"
+                 android:layout_gravity="center"
+                 android:visibility="visible"
+                 app:lottie_autoPlay="true"
+                 app:lottie_fileName="no_data.json"
+                 app:lottie_loop="true" />
+
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:text="@string/data_not_found"
+                 android:fontFamily="@font/semi_bold"
+                 android:layout_marginTop="-15dp"
+                 android:includeFontPadding="false"
+                 android:textColor="@color/black"
+                 android:textSize="@dimen/_12sdp" />
+
+         </LinearLayout>-->
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ll_tab"
+                android:background="@color/white" />
+
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/shimmer_lay"
+            layout="@layout/placeholder_all_greetings2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_tab" />
+
+
+    </RelativeLayout>
+</layout>
