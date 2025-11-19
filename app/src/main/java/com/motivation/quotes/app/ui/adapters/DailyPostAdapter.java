@@ -292,9 +292,13 @@ public class DailyPostAdapter extends RecyclerView.Adapter<DailyPostAdapter.View
                             GlideDataBinding.bindImage(holder.binding2.videoThumb, list.get(position).thumbnail);
 
                         } else {
+                            holder.binding2.video.setVisibility(View.GONE);
+                            holder.binding2.imagePost.setVisibility(View.VISIBLE);
+
+                            holder.binding2.imgPlay.setVisibility(View.GONE);
+                            holder.binding2.ivPlay.setVisibility(View.GONE);
+
                             GlideDataBinding.bindImage(holder.binding2.imagePost, list.get(position).image_url);
-                            holder.binding2.imgPlay.setVisibility(View.VISIBLE);
-                            holder.binding2.ivPlay.setVisibility(View.VISIBLE);
                         }
 
                         holder.binding2.recyclerview.setLayoutManager(linearLayoutManager);
@@ -443,12 +447,13 @@ public class DailyPostAdapter extends RecyclerView.Adapter<DailyPostAdapter.View
                         holder.binding.ivPremium.setVisibility(View.VISIBLE);
                     }
 
-                    if (list.get(position).video_path!=null && !list.get(position).video_path.isEmpty()) {
+
+                    if (list.get(position).is_video) {
 
                         holder.binding.video.setVisibility(View.VISIBLE);
+                        holder.binding.imagePost.setVisibility(View.GONE);
                         holder.binding.progressBar.setVisibility(View.VISIBLE);
                         holder.binding.videoThumb.setVisibility(View.VISIBLE);
-                        holder.binding.video.setVideoPath(video);
 
                         holder.binding.video.setOnPreparedListener(mediaPlayer -> {
                             holder.binding.progressBar.setVisibility(View.GONE);
@@ -505,7 +510,9 @@ public class DailyPostAdapter extends RecyclerView.Adapter<DailyPostAdapter.View
 
                         GlideDataBinding.bindImage(holder.binding.videoThumb, list.get(position).video_path);
                     } else {
-                        GlideDataBinding.bindImage(holder.binding.imagePost, list.get(position).video_path);
+                        holder.binding.video.setVisibility(View.GONE);
+                        holder.binding.imagePost.setVisibility(View.VISIBLE);
+                        GlideDataBinding.bindImage(holder.binding.imagePost, list.get(position).image_url);
                         holder.binding.imgPlay.setVisibility(View.GONE);
                         holder.binding.ivPlay.setVisibility(View.GONE);
                     }
