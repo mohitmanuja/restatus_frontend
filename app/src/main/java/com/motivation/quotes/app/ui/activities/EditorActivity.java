@@ -20,6 +20,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Build;
@@ -43,7 +44,10 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.content.FileProvider;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -55,6 +59,8 @@ import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.DownloadListener;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.CustomTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.growwthapps.dailypost.v2.R;
 import com.motivation.quotes.app.View.AutoFitEditText;
 import com.motivation.quotes.app.View.ViewIdGenerator;
@@ -165,7 +171,29 @@ public class EditorActivity extends AppCompatActivity implements AutofitTextRel.
         }
 
         intilization();
-        GlideDataBinding.bindImage(binding.backgroundImg, imageUri);
+        Glide.with(this)
+                .asBitmap()
+                .load(imageUri)
+                .into(new CustomTarget<Bitmap>() {
+                    @Override
+                    public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
+                        // Get actual image dimensions
+                        int width = resource.getWidth();
+                        int height = resource.getHeight();
+
+                        if (width > 0 && height > 0) {
+                            float ratio = (float) width / (float) height;
+                            ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) binding.mainCardView.getLayoutParams();
+                            params.dimensionRatio = ratio + ":1"; // dynamically set width:height ratio
+                            binding.mainCardView.setLayoutParams(params);
+                        }
+
+                        binding.backgroundImg.setImageBitmap(resource);
+                    }
+
+                    @Override
+                    public void onLoadCleared(@Nullable Drawable placeholder) {}
+                });
 
 
         binding.changeFont.setOnClickListener(new View.OnClickListener() {
