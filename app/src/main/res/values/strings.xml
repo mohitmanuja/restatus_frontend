@@ -1,6 +1,6 @@
 <resources>
 
-    <string name="app_name">Daily Post 2.0</string>
+    <string name="app_name">ReStatus</string>
 
     <!--    No Need to change. Changeable from admin-->
     <string name="admob_app_id">ca-app-pub-3940256099942544~3347511713</string>
@@ -559,5 +559,6 @@
     <string name="please_wait">Please wait</string>
     <string name="processing">Processing..</string>
     <string name="login__success">login success....</string>
+    <string name="default_web_client_id">758367373539-3f3ckictfpqg2ndvb12nsoe52ire2tu2.apps.googleusercontent.com</string>
 
 </resources>

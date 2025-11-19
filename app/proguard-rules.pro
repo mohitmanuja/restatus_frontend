@@ -6,10 +6,10 @@
 -keep class com.growwthapps.dailypost.v2.viewmodel.** { *; }
 -keep class com.growwthapps.dailypost.v2.respository.** { *; }
 -keep class com.growwthapps.dailypost.v2.api.** { *; }
--keep class com.growwthapps.dailypost.v2.ui.adapters.GreetingAdapter { *; }
+-keep class com.motivation.quotes.app.ui.adapters.GreetingAdapter { *; }
 
--keep class com.growwthapps.dailypost.v2.RoundedImageView { *; }
--keep class com.growwthapps.dailypost.v2.ToggleImageButton { *; }
+-keep class com.motivation.quotes.app.RoundedImageView { *; }
+-keep class com.motivation.quotes.app.ToggleImageButton { *; }
 
 # ===============================
 # Keep Huawei dependencies

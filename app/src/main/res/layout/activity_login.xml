@@ -332,7 +332,7 @@
                                     app:lineWidth="1.3dp"
                                     app:viewType="rectangle" />
 
-                                <com.growwthapps.dailypost.v2.OtpEditText
+                                <com.motivation.quotes.app.OtpEditText
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginStart="8dp"

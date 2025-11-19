@@ -1,49 +1,41 @@
 {
   "project_info": {
-    "project_number": "733839384346",
-    "project_id": "daily-post-v2",
-    "storage_bucket": "daily-post-v2.firebasestorage.app"
+    "project_number": "758367373539",
+    "project_id": "quotes-5c41d",
+    "storage_bucket": "quotes-5c41d.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:733839384346:android:9060a41b4246fa546356a3",
+        "mobilesdk_app_id": "1:758367373539:android:947096185672c688259dd6",
         "android_client_info": {
-          "package_name": "com.growwthapps.dailypost.v2"
+          "package_name": "com.motivation.daily.quotes.app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "733839384346-h1baad9lit8t5motqaplpqcb9kqrfdl4.apps.googleusercontent.com",
+          "client_id": "758367373539-3f3ckictfpqg2ndvb12nsoe52ire2tu2.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.growwthapps.dailypost.v2",
-            "certificate_hash": "72744fef5390c17c62d073fd3c5ba54e66cd3167"
+            "package_name": "com.motivation.daily.quotes.app",
+            "certificate_hash": "67ab9bf97f53c351faa025a64e8423186d2734a3"
           }
         },
         {
-          "client_id": "733839384346-q9tbu0utfi6eg2gv3pe5gsot9c3es005.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.growwthapps.dailypost.v2",
-            "certificate_hash": "69bdbe237a95b332a4f6672771b33465aa11b4d4"
-          }
-        },
-        {
-          "client_id": "733839384346-lraevicd6oua325mngfrdfj14pbo8nkb.apps.googleusercontent.com",
+          "client_id": "758367373539-822or8lrpsvuccpjrsn5f1uim68mu4o4.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDACohq93xMhuZx9JBHds2jvIPIPb9KLhY"
+          "current_key": "AIzaSyBgsNFdvPe6zhI7ZHNurKq3n_51BJXop-U"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "733839384346-lraevicd6oua325mngfrdfj14pbo8nkb.apps.googleusercontent.com",
+              "client_id": "758367373539-822or8lrpsvuccpjrsn5f1uim68mu4o4.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

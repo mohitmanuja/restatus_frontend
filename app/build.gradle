@@ -13,7 +13,7 @@ android {
     namespace 'com.growwthapps.dailypost.v2'
 
     defaultConfig {
-        applicationId "com.growwthapps.dailypost.v2"
+        applicationId "com.motivation.daily.quotes.app"
         minSdk 24
         targetSdk 35
         versionCode 2

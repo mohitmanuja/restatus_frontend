@@ -120,13 +120,13 @@
                                 </RelativeLayout>
 
 
-                                <com.growwthapps.dailypost.v2.utils.ZoomLayout
+                                <com.motivation.quotes.app.utils.ZoomLayout
                                     android:id="@+id/greeting_zoom_lay"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:visibility="gone">
 
-                                </com.growwthapps.dailypost.v2.utils.ZoomLayout>
+                                </com.motivation.quotes.app.utils.ZoomLayout>
 
                                 <ImageView
                                     android:id="@+id/background_img"
@@ -492,7 +492,7 @@
                     android:thumb="@drawable/progressbar_thumb"
                     android:visibility="gone" />
 
-                <com.growwthapps.dailypost.v2.ToggleImageButton
+                <com.motivation.quotes.app.ToggleImageButton
                     android:id="@+id/fontBoldImg"
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"
@@ -500,7 +500,7 @@
                     app:tib_drawable_off="@drawable/font_bold_unselect_img"
                     app:tib_drawable_on="@drawable/font_bold_unselect_img" />
 
-                <com.growwthapps.dailypost.v2.ToggleImageButton
+                <com.motivation.quotes.app.ToggleImageButton
                     android:id="@+id/fontItalicImg"
                     android:layout_width="@dimen/_25sdp"
                     android:layout_height="@dimen/_25sdp"

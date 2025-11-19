@@ -49,7 +49,7 @@
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <com.growwthapps.dailypost.v2.CustomVideoView
+                        <com.motivation.quotes.app.CustomVideoView
                             android:id="@+id/video"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"

@@ -22,7 +22,7 @@
     </queries>
 
     <application
-        android:name=".MyApplication"
+        android:name="com.motivation.quotes.app.MyApplication"
         android:allowBackup="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -36,53 +36,53 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:allowBackup">
         <activity
-            android:name=".ui.activities.MyFramesActivity"
+            android:name="com.motivation.quotes.app.ui.activities.MyFramesActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.activities.FillFrameDetails"
+            android:name="com.motivation.quotes.app.ui.activities.FillFrameDetails"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.HomeActivity"
+            android:name="com.motivation.quotes.app.ui.activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.SavePostActivity"
+            android:name="com.motivation.quotes.app.ui.activities.SavePostActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.CreatePostActivity"
+            android:name="com.motivation.quotes.app.ui.activities.CreatePostActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.LanguageActivity"
+            android:name="com.motivation.quotes.app.ui.activities.LanguageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.SettingActivity"
+            android:name="com.motivation.quotes.app.ui.activities.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.EditProfileActivity"
+            android:name="com.motivation.quotes.app.ui.activities.EditProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.DownloadActivity"
+            android:name="com.motivation.quotes.app.ui.activities.DownloadActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.motivation.quotes.app.ui.activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activities.SubscriptionActivity"
+            android:name="com.motivation.quotes.app.ui.activities.SubscriptionActivity"
             android:exported="false" />
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent" />
         <activity
-            android:name=".ui.activities.PrivacyActivity"
+            android:name="com.motivation.quotes.app.ui.activities.PrivacyActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activities.ContactUsActivity"
+            android:name="com.motivation.quotes.app.ui.activities.ContactUsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activities.CustomSplashActivity"
+            android:name="com.motivation.quotes.app.ui.activities.CustomSplashActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -100,8 +100,8 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="@string/admob_app_id" />
 
-        <activity android:name=".ui.activities.ShareImageActivity" />
-        <activity android:name=".ui.activities.DailyPostActivity" />
+        <activity android:name="com.motivation.quotes.app.ui.activities.ShareImageActivity" />
+        <activity android:name="com.motivation.quotes.app.ui.activities.DailyPostActivity" />
 
         <meta-data
             android:name="com.onesignal.NotificationOpened.DEFAULT"
@@ -124,9 +124,9 @@
             android:name="com.google.android.gms.ads.flag.NATIVE_AD_DEBUGGER_ENABLED"
             android:value="false" />
 
-        <activity android:name=".ui.activities.EditorActivity" />
-        <activity android:name=".ui.activities.ActivityAllGreetings" />
-        <activity android:name="com.growwthapps.dailypost.v2.ui.activities.LoginActivity" />
+        <activity android:name="com.motivation.quotes.app.ui.activities.EditorActivity" />
+        <activity android:name="com.motivation.quotes.app.ui.activities.ActivityAllGreetings" />
+        <activity android:name="com.motivation.quotes.app.ui.activities.LoginActivity" />
 
     </application>
 
